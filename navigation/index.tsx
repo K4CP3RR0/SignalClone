@@ -81,19 +81,23 @@ const ChatRoomHeader = (props) => {
     <View style={{
       flexDirection :'row', 
       justifyContent:'space-between', 
-      width:'95%',
+      width:'93%' ,
+      marginLeft:0,
+    
+      backgroundColor:'red',
       padding:10,
+      
       alignItems:'center',}}>
 
       <Image source={{uri : 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/vadim.jpg'}} 
       style={{width:30,height:30,borderRadius:30}}
       />
-      <Text style={{marginLeft:40, fontWeight:'bold'}}>Signal</Text>
-      <View style={{flexDirection:'row',marginRight:10}}>
+      <Text style={{flex:1, marginLeft:40, fontWeight:'bold'}}>{props.children}</Text>
+     
       <SimpleLineIcons name="camera" size={24} color="black" 
       style={{marginHorizontal:10,}}/>
       <Feather name="edit-2" size={24} color="black" style={{marginHorizontal:10,}}/>
-      </View>
+      
     </View>
     )
 }
